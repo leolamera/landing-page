@@ -1,82 +1,180 @@
 import Head from 'next/head'
+import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Datajus</title>
+        <link rel="icon" href="/datajus.png" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+      <body className="bg-gray-100 min-h-screen w-full">
+        <Header/>
+      <main className="w-full bg-white">
+        <Dobra/>
+        <Form/>
+        <Service/>
+        <div className="pt-24 px-4">
+          <div className="space-y-4">
+            <h1 className="text-3xl font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+            <h3 className="text-xl font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. A est placerat at blandit turpis lacus eget.</h3>
+          </div>
+          <div className="pt-10 space-y-4 text-lg">
+          <div className="flex flex-row space-x-2">
+            <div className="w-6 h-6  rounded-xl bg-blue-500"></div>
+            <h4>Lorem ipsum dolor sit amet, consectetur.</h4>
+          </div>
+          <div className="flex flex-row space-x-2">
+            <div className="w-6 h-6  rounded-xl bg-blue-500"></div>
+            <h4>Lorem ipsum dolor sit amet, consectetur.</h4>
+          </div>
+          <div className="flex flex-row space-x-2">
+            <div className="w-6 h-6  rounded-xl bg-blue-500"></div>
+            <h4>Lorem ipsum dolor sit amet, consectetur.</h4>
+          </div>
+          <div className="flex flex-row space-x-2">
+            <div className="w-6 h-6  rounded-xl bg-blue-500"></div>
+            <h4>Lorem ipsum dolor sit amet, consectetur.</h4>
+          </div>
+          </div>
+        </div>    
       </main>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
+      </body>
+    </div>
+  )
+}
+
+function Service() {
+
+  return (
+    <div>
+              <div className="pt-20 w-full px-4">
+          <div className="space-y-2">
+            <h3 className="text-lg text-blue-500 font-medium">NOSSOS SERVIÇOS</h3>
+            <h1 className="text-3xl font-medium">A better way to send money</h1>
+          </div>
+          <div className="pt-4">
+            <p className="text-md">Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.</p>
+          </div>
+          <div>
+          <div className="flex flex-row pt-10 space-x-4">
+            <div className="w-48 h-14 rounded-lg bg-blue-500">
+            </div>
+            <div className="space-y-2">
+              <h1 className="text-lg font-medium">Competitive exchange rates</h1>
+              <h3 className="text-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. </h3>
+            </div>
+          </div>
+          <div className="flex flex-row pt-10 space-x-4">
+            <div className="w-48 h-14 rounded-lg bg-blue-500">
+            </div>
+            <div className="space-y-2">
+              <h1 className="text-lg font-medium">No hidden fees</h1>
+              <h3 className="text-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. </h3>
+            </div>
+          </div>
+          <div className="flex flex-row pt-10 space-x-4">
+            <div className="w-48 h-14 rounded-lg bg-blue-500">
+            </div>
+            <div className="space-y-2">
+              <h1 className="text-lg font-medium">Transfers are instant</h1>
+              <h3 className="text-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. </h3>
+            </div>
+          </div>
+          <div className="flex flex-row pt-10 space-x-4">
+            <div className="w-48 h-14 rounded-lg bg-blue-500">
+            </div>
+            <div className="space-y-2">
+              <h1 className="text-lg font-medium">Mobile notifications</h1>
+              <h3 className="text-md">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. </h3>
+            </div>
+          </div>
+          </div>
+        </div>
+      
+    </div>
+  )
+}
+
+function Form() {
+
+  return(
+    <div>
+        <div className="bg-white px-4 space-y-10 w-full pb-4 rounded-xl shadow-lg">
+          <div className="pt-4 space-y-4">
+            <h1 className="text-2xl font-normal">Comece agora a recuperar a saúde da sua empresa. ⚖️</h1>
+            <h3 className="text-md font-normal">Lorem ipsum dolor sit amet, consectetur elit.</h3>
+          </div>
+          <form className="space-y-4">
+            <div className="flex flex-col">
+              <label className="text-lg text-gray-600">Nome Completo</label>
+              <input 
+              className="shadow-sm border-2 rounded-lg h-12 pl-2"
+              ></input>
+            </div>
+            <div className="flex flex-col">
+              <label className="text-lg text-gray-600">E-mail</label>
+              <input 
+              className="shadow-sm border-2 rounded-lg h-12 pl-2"
+              ></input>
+            </div>
+            <div className="flex flex-col">
+              <label className="text-lg text-gray-600">Telefone</label>
+              <input 
+              className="shadow-sm border-2 rounded-lg h-12 pl-2"
+              ></input>
+            </div>
+            <div className="flex flex-col">
+              <label className="text-lg text-gray-600">CNPJ</label>
+              <input 
+              className="shadow-sm border-2 rounded-lg h-12 pl-2"
+              ></input>
+            </div>
+            <button
+            type="button" 
+            className="w-full h-14 border rounded-lg border-blue-500 text-blue-500 font-medium">Continuar</button>
+          </form>
+        </div>
+      
+    </div>
+  )
+}
+
+function Dobra() {
+
+  return(
+  <div className="bg-gray-100">
+    <div className="px-4 pt-14 space-y-3">
+          <h1 className="text-3xl font-medium">Data to enrich your <span className="text-blue-500">online business</span></h1>
+          <h3 className="text-xl font-normal">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</h3>
+        </div>
+        <div className="px-4 pt-5 space-y-6 pb-20">
+          <button className="w-full h-12 bg-blue-500 rounded-md text-xl text-white">Ver preços</button>
+          <button className="w-full text-lg text-blue-500" >Falar com consultor -></button>
+        </div>
+  </div>
+  )
+}
+
+function Header() {
+  return (
+    <div>
+      <header className="flex justify-between flex-row h-20 w-screen">
+          <div className="pt-5 pl-6">
+          <Image
+          src="/../public/Logo.png"
+          height={30}
+          width={108}
+          />
+          </div>
+          <div className= "pt-4 pr-6 order-last">
+            <button className="w-11 h-10 border-2 rounded border-blue-400">
+              <vector className="border-indigo-800 w-8"></vector>
+            </button>
+          </div>
+        </header>
     </div>
   )
 }
